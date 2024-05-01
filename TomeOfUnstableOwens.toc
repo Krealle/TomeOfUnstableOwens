@@ -1,0 +1,25 @@
+## Interface: 100205
+
+## Title: Tome Of Unstable Owens
+## Author: Vollmer
+## Version: @project-version@
+## X-Date: @project-date-iso@
+## X-License: MIT
+## X-Curse-Project-ID: 
+## X-Wago-ID: 
+
+## Notes: Oh no! Owen Wilson has taken over your tome!
+## Notes-ruRU: @localization(locale="ruRU")@
+## Notes-deDE: @localization(locale="deDE")@
+## Notes-koKR: @localization(locale="koKR")@
+## Notes-esMX: @localization(locale="esMX")@
+## Notes-esES: @localization(locale="esES")@
+## Notes-ptBR: @localization(locale="ptBR")@
+## Notes-zhCN: @localization(locale="zhCN")@
+## Notes-zhTW: @localization(locale="zhTW")@
+## Notes-itIT: @localization(locale="itIT")@
+## Notes-frFR: @localization(locale="frFR")@
+
+## IconTexture: Interface\ICONS\inv_jewelry_trinket_17
+
+TomeOfUnstableOwens.lua
