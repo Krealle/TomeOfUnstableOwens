@@ -4,5 +4,5 @@ Oh no! Owen Wilson has taken over your tome! He now show up to announce your pro
 
 # Downloads
 
-- [Curseforge]()
-- [Wago AddOns]()
+- [Curseforge](https://curseforge.com/wow/addons/tome-of-unstable-owens)
+- [Wago AddOns](https://addons.wago.io/addons/tomeofunstableowens)

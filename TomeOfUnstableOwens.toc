@@ -5,8 +5,8 @@
 ## Version: @project-version@
 ## X-Date: @project-date-iso@
 ## X-License: MIT
-## X-Curse-Project-ID: 
-## X-Wago-ID: 
+## X-Curse-Project-ID: 1011725
+## X-Wago-ID: 4N2m4aGL
 
 ## Notes: Oh no! Owen Wilson has taken over your tome!
 ## Notes-ruRU: @localization(locale="ruRU")@
