@@ -10,12 +10,33 @@ local unstableImages = {
 	[433957] = true,
 	[433958] = true,
 }
+local TOME_ITEM_ID = 212685
 
 local frame = CreateFrame("FRAME", "TomeOfUnstableOwens")
-
-frame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+frame:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
+frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 
 frame:SetScript("OnEvent", function(self, event, ...)
+    if event == "PLAYER_EQUIPMENT_CHANGED" or event == "PLAYER_ENTERING_WORLD" then
+        local playerEquippedTome = false
+        for i = 13, 14 do
+            local trinketItemID = GetInventoryItemID("player", i)
+            
+            if trinketItemID == TOME_ITEM_ID then
+                playerEquippedTome = true
+                break
+            end
+        end
+
+        if playerEquippedTome then
+            frame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+        else
+            frame:UnregisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+        end
+        
+        return
+    end
+
 	local _, subevent, _, sourceGUID = CombatLogGetCurrentEventInfo()
 	if (sourceGUID ~= playerGUID or subevent ~= "SPELL_SUMMON") then
 		return
