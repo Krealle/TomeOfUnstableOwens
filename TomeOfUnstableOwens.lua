@@ -12,6 +12,8 @@ local unstableImages = {
 }
 local TOME_ITEM_ID = 212685
 
+local isTomeEquipped = false
+
 local frame = CreateFrame("FRAME", "TomeOfUnstableOwens")
 frame:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
@@ -31,9 +33,16 @@ frame:SetScript("OnEvent", function(self, event, ...)
         if playerEquippedTome then
             frame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
         else
+            if isTomeEquipped then
+                if UnitLevel("player") > 70 then
+                    print("|cffffa500[TomeOfUnstableOwens]|r |cFFFF3030Consider removing this AddOn, since it is now deprecated.|r")
+                end
+            end
+
             frame:UnregisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
         end
         
+        isTomeEquipped = playerEquippedTome
         return
     end
 
